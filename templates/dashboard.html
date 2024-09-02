@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 class="mt-5">Disaster Response Dashboard</h1>
+<div class="row mt-4">
+    <div class="col-lg-8">
+        <canvas id="disasterChart"></canvas>
+    </div>
+    <div class="col-lg-4">
+        <h3>Recent Reports</h3>
+        <ul class="list-group">
+            {% for report in disaster_data %}
+            <li class="list-group-item">
+                <strong>{{ report['category'] }}:</strong> {{ report['text'] }} ({{ report['location'] }})
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,7 @@
+CREATE TABLE disaster_reports (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    source TEXT,
+    text TEXT,
+    category TEXT,
+    location TEXT
+);
